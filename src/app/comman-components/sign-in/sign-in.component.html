@@ -1,0 +1,26 @@
+<!-- sign-in.component.html -->
+<form [formGroup]="signInForm" (ngSubmit)="signIn()">
+    <mat-card class="sign-in-card">
+        <mat-card-header>
+            <mat-card-title>Sign In</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field class="full-width">
+                <input matInput placeholder="Email" formControlName="email">
+                <mat-error *ngIf="signInForm.get('email')?.hasError('required')">Email is required</mat-error>
+                <mat-error *ngIf="signInForm.get('email')?.hasError('email')">Invalid email format</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="full-width">
+                <input matInput placeholder="Password" type="password" formControlName="password">
+                <mat-error *ngIf="signInForm.get('password')?.hasError('required')">Password is required</mat-error>
+            </mat-form-field>
+
+            <div class="forgot-password">
+                <a href="#">Forgot password?</a>
+            </div>
+
+            <button mat-raised-button color="primary" type="submit" [disabled]="signInForm.invalid">Sign In</button>
+        </mat-card-content>
+    </mat-card>
+</form>

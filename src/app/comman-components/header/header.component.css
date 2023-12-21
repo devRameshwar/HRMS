@@ -1,0 +1,29 @@
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2196F3;
+    /* Set your preferred background color */
+}
+
+.nav-button {
+    margin: 0 8px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.nav-button button {
+    background-color: transparent;
+    color: white(214, 220, 208);
+    border: rgb(225, 34, 34);
+    font-size: 14px;
+    cursor: auto;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-button button:hover {
+    color:whitesmoke;
+    /* Set your preferred hover color */
+}

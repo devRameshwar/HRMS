@@ -1,0 +1,16 @@
+.mat-toolbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2196F3;
+    /* Set your preferred background color */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    /* Set your preferred height */
+}
+
+.footer-content {
+    color: white;
+}

@@ -1,0 +1,34 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit()" [formGroup]="signupForm">
+        <mat-form-field appearance="fill">
+            <mat-label>First Name</mat-label>
+            <input matInput formControlName="firstName" required>
+            <mat-error *ngIf="signupForm.get('firstName')?.hasError('required')">First Name is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Last Name</mat-label>
+            <input matInput formControlName="lastName" required>
+            <mat-error *ngIf="signupForm.get('lastName')?.hasError('required')">Last Name is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" required>
+            <mat-error *ngIf="signupForm.get('email')?.hasError('required')">Email is required</mat-error>
+            <mat-error *ngIf="signupForm.get('email')?.hasError('email')">Invalid email address</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password" required>
+            <mat-error *ngIf="signupForm.get('password')?.hasError('invalidPassword')">
+                Password is required it must contain at least one uppercase letter, one digit, and one special symbol
+            </mat-error>
+        </mat-form-field>
+
+
+        <button mat-raised-button color="primary" type="submit" [disabled]="signupForm.invalid">Next</button>
+
+    </form>
+</div>

@@ -1,0 +1,15 @@
+ /* Add your custom CSS styling here */
+ .sign-in-card {
+     max-width: 400px;
+     margin: auto;
+ }
+
+ .full-width {
+     width: 100%;
+     margin-bottom: 15px;
+ }
+
+ .forgot-password {
+     margin-top: 10px;
+     text-align: right;
+ }
